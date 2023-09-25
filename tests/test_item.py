@@ -44,6 +44,12 @@ def test_string_to_number():
     assert Item.string_to_number('5.5') == 5
 
 
+def test_repr_str():
+    item1 = Item("Смартфон", 10000, 20)
+
+    assert repr(item1) == "Item('Смартфон', 10000, 20)"
+    assert str(item1) == 'Смартфон'
+    assert str(item1) == 'Смартфон'
 
 
 
@@ -51,12 +57,5 @@ def test_string_to_number():
 
 
 
-# Item.instantiate_from_csv('items.csv')  # создание объектов из данных файла
-# assert len(Item.all) == 5  # в файле 5 записей с данными по товарам
-#
-# item1 = Item.all[0]
-# assert item1.name == 'Смартфон'
-#
-# assert Item.string_to_number('5') == 5
-# assert Item.string_to_number('5.0') == 5
-# assert Item.string_to_number('5.5') == 5
+
+
