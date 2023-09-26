@@ -27,11 +27,6 @@ def test_name_length():
     # длина наименования товара больше 10 символов
     item.name = 'СуперСмартфон'
     assert item.name == "СуперСмарт"
-    try:
-        item.name > 10
-    except Exception:
-        return 'Длина наименования товара превышает 10 символов'
-    assert Exception == 'Длина наименования товара превышает 10 символов'
 
 
 def test_instantiate_from_csv():
